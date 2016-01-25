@@ -1,35 +1,61 @@
-Project name : Expense Manager Description : Expense manager is an 
+ Project name : Expense Manager 
+
+Description : Expense manager is an 
 application which allows user to track his/her income and expenses. It 
 provides ways to categorize expenses (e.g. rent, travel, party, office, 
 studies, shopping etc.).
-Features
-Add income from different sources (salary, business, interest on deposits etc.). 
-Add categories to be selected when adding expenses.
-Add/delete/update expense. capture these details - amount of expense, category, 
+
+Features:
+* Add income from different sources (salary, business, interest on deposits etc.). 
+
+* Add categories to be selected when adding expenses.
+
+* Add/delete/update expense. capture these details - amount of expense, category, 
 date of expense, mode of payment (credit card, cash, electronic transfer)
-A report page providing ability to filter expenses based on category, date.
-Ability to sort expenses in ascending order based on amount
 
-Data structures
-Transaction : {
-transactionId
-payer
-payee
-category
-subCategory
-amount
-date
-modeOfPayment : (cash/electronic_transfer/cheque/credit_card)
-notes
-type : (Income or Expense)
+* A report page providing ability to filter expenses based on category, date.
+
+* Ability to sort expenses in ascending order based on amount
+
+Data structures:
+
+Transaction Object : 
+
+{
+    
+    transactionId,
+  
+    payer,
+    
+    payee,
+    
+    category,
+    
+    subCategory,
+    
+    amount,
+    
+    date,
+    
+    modeOfPayment : (cash/electronic_transfer/cheque/credit_card),
+    
+    notes,
+    
+    type : (Income or Expense)
+
 }
 
-SubCategory : {
-parentCategoryName
-subCategoryName
+SubCategory Object:
+
+{
+    
+    parentCategoryName,
+    
+    subCategoryName
 }
 
-Session 2
+Assignments of Session 2:
+
 Create an AngularJS application to visualize expense and income details.
 Create 2 arrays of Transaction objects. One for expenses and one for income.
 Provide two buttons on view “Show Income” and “Show Expense”
