@@ -18,28 +18,44 @@
           payee: 'Hemant',
           category: 'Rent',
           subCategory: 'sub',
-          amount: '2000',
+          amount: '1000',
           date: '28/01/16',
-          modeOfPayment: 'cash'
+          modeOfPayment: 'cash',
+          contenteditable: true
         }, {
           id : 1,
-          payer: 'Yuvi',
-          payee: 'Hemant',
+          payer: 'Kailas',
+          payee: 'Ankit',
           category: 'Rent',
           subCategory: 'sub',
           amount: '2000',
           date: '28/01/16',
-          modeOfPayment: 'cash'
+          modeOfPayment: 'cash',
+        contenteditable: false
         }, {
           id : 2,
-          payer: 'Yuvi',
-          payee: 'Hemant',
+          payer: 'Akshay',
+          payee: 'Amey',
           category: 'Rent',
           subCategory: 'sub',
-          amount: '2000',
+          amount: '3000',
           date: '28/01/16',
-          modeOfPayment: 'cash'
+          modeOfPayment: 'cash',
+          contenteditable: false
         }
       ];
+
+      $scope.composeData = {};
+      $scope.editable = false;
+
+      $scope.compose = function(transaction){
+        $scope.editable = true;
+        $scope.composeData = transaction;
+      };
+  
+      $scope.saveComposition = function () {
+        $scope.editable = false;
+      }
+
     }]);
 })();
